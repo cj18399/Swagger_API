@@ -1,0 +1,19 @@
+summary: "setSceneMark"
+description: "This is a simple API which returns updated scenemarks"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+parameters:
+- in: "body"
+  name: "body"
+  description: "Accepts a input dictionary of input"
+  required: true
+  schema:
+    type: "object"
+    properties:
+      scenemarks:
+        example : {"Version": "1.0", "MessageType": "request","SourceEndPointID": "00000001-5cdd-280b-8002-00010000f3e0","DestinationEndPointID": "00000001-5cdd-280b-8003-00020000ffff","CommandID": 4,"CommandType": "SetSceneMark","AccessToken": "token","DateTimeStamp": "2020-09-23T09:56:07.470Z","EncryptionOn": false,"Payload":{"Body": "{\"Version\":\"1.0\",\"TimeStamp\":\"2020-09-16T11:46:33.829Z\",\"SceneMarkID\":\"SMK_00000001-5cdd-280b-8002-00010000f3e0_0001_000002db\",\"DestinationID\":\"00000001-5cdd-280b-8003-00020000ffff\",\"SceneMarkStatus\":\"Active\",\"NodeID\":\"00000001-5cdd-280b-8002-00010000f3e0_0001\",\"PortID\":\"00000001-5cdd-280b-8002-00010000f3e0_0001\",\"VersionControl\":{\"DataPipelineInstanceID\":\"00000001-5cdd-280b-8003-000200000002\", \"VersionList\":[{\"VersionNumber\":1.0,\"DateTimeStamp\":\"2020-09-16T11:46:33.829Z\",\"NodeID\":\"00000001-5cdd-280b-8002-00010000f3e0_0001\"}]},\"ThumbnailList\":[{\"VersionNumber\":1.0,\"SceneDataID\":\"SDT_00000001-5cdd-280b-8002-00010000f3e0_0001_00001c8f\"}],\"AnalysisList\":[{\"VersionNumber\":1.0,\"SceneMode\":\"Face\",\"CustomAnalysisID\":\"\",\"AnalysisDescription\":\"FaceDetection\",\"ProcessingStatus\":\"Detect\"}],\"DetectedObjects\":[{\"VersionNumber\":0.0,\"NICEItemType\":\"Face\",\"CustomItemType\":\"\",\"Probability\":0.9,\"BoundingBox\":{\"XCoordinate\":322,\"YCoordinate\":434,\"Height\":204,\"Width\":70},\"RelatedSceneData\":[\"SDT_00000001-5cdd-280b-8002-00010000f3e0_0001_00001c8e\",\"SDT_00000001-5cdd-280b-8002-00010000f3e0_0001_00001c90\"]}],\"SceneDataList\":[{\"SceneDataID\":\"SDT_00000001-5cdd-280b-8002-00010000f3e0_0001_00001c8f\",\"TimeStamp\":\"2020-09-16T11:46:33.829Z\",\"SourceNodeID\":\"00000001-5cdd-280b-8002-00010000f3e0_0001\",\"SourceNodeDescription\":\"SceneraBridge-NVidiaJetsonNano\",\"DataType\":\"RGBStill\",\"Status\":\"AvailableatProvidedURI\",\"MediaFormat\":\"JPEG\",\"Resolution\":{\"Height\":1080,\"Width\":1920},\"SceneDataURI\":\"https://upload.wikimedia.org/wikipedia/commons/b/b6/Deepika_Padukone_Cannes_2018_%28cropped%29.jpg\",\"Encryption\":{\"EncryptionOn\":false}},{\"SceneDataID\":\"SDT_00000001-5cdd-280b-8002-00010000f3e0_0001_00001c8e\",\"TimeStamp\":\"2020-09-16T11:46:33.829Z\",\"SourceNodeID\":\"00000001-5cdd-280b-8002-00010000f3e0_0001\",\"SourceNodeDescription\":\"SceneraBridge-NVidiaJetsonNano\",\"DataType\":\"RGBStill\",\"Status\":\"AvailableatProvidedURI\",\"MediaFormat\":\"JPEG\",\"Resolution\":{\"Height\":1080,\"Width\":1920},\"SceneDataURI\":\"https://upload.wikimedia.org/wikipedia/commons/9/9c/Hrithik_at_Rado_launch.jpg\",\"Encryption\":{\"EncryptionOn\":false}},{\"SceneDataID\":\"SDT_00000001-5cdd-280b-8002-00010000f3e0_0001_00001c90\",\"TimeStamp\":\"2020-09-16T11:46:33.829Z\",\"SourceNodeID\":\"00000001-5cdd-280b-8002-00010000f3e0_0001\",\"SourceNodeDescription\":\"SceneraBridge-NVidiaJetsonNano\",\"Duration\":\"30\",\"DataType\":\"RGBVideo\",\"Status\":\"AvailableatProvidedURI\",\"MediaFormat\":\"H.264\",\"Resolution\":{\"Height\":1080,\"Width\":1920},\"SceneDataURI\":\"https://upload.wikimedia.org/wikipedia/commons/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg\",\"Encryption\":{\"EncryptionOn\":false}}]}"}}
+responses:
+  405:
+    description: "Invalid input"
