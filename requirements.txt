@@ -12,3 +12,9 @@ six==1.15.0
 urllib3==1.25.9
 numpy
 flask
+flasgger
+cognitive_face
+pymongo
+pandas
+azure.cosmos
+flask_cors
