@@ -28,7 +28,7 @@ swagger_config = {
     "headers": [],
     "specs": [
         {
-            "endpoint": "apispec_1",
+            "endpoint": "https://stagingenvnodesequencer.scenera.live",
             "route": "/apispec_1.json",
             "rule_filter": lambda rule: True,  # all in
             "model_filter": lambda tag: True,  # all in
