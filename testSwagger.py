@@ -58,10 +58,10 @@ def index():
 def add_numbers():
     scenemark_file = request.json
     try:
-        uri = "mongodb://face-recognition-1:mgT6eNYp88f25HL4JogVsH20KznhvuhKg92aJzpK9lNB3A1RVhiKWA0MVwXDRFewd2hIVNXN4ECnnSan4CB7iA==@face-recognition-1.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@face-recognition-1@"
+        uri = "mongodb database uri"
         myclient = pymongo.MongoClient(uri)
-        mydb = myclient["New_face"]
-        mycol = mydb["faceInfo"]
+        mydb = myclient["dbname"]
+        mycol = mydb["document name"]
 
         scenemark_file["scenemarks"]["Payload"]["Body"] = scenemark_file["scenemarks"]["Payload"]["Body"].replace('\\"',"\"")
         print(scenemark_file)
@@ -81,11 +81,11 @@ def add_numbers():
         x = x.reset_index(drop=True)
 
         ############# Perform the Face Detection############
-        face_api_url_verify = 'https://facedemonstration.cognitiveservices.azure.com/face/v1.0/verify'
-        subscription_key = "055cc8b8d56c42e5bddc8e8a315c080d"
+        face_api_url_verify = 'verify url'
+        subscription_key = "subscription key"
 
-        faceURI = "https://facedemonstration.cognitiveservices.azure.com/face/v1.0/"
-        faceKey = "055cc8b8d56c42e5bddc8e8a315c080d"
+        faceURI = "url"
+        faceKey = "key"
 
         CF.BaseUrl.set(faceURI)
         CF.Key.set(faceKey)
